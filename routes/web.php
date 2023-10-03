@@ -34,7 +34,9 @@ Route::get('/gyms', function () {
                 'no' => 2,
                 'gambar' => 'https://media.tacdn.com/media/attractions-splice-spp-674x446/06/dc/83/bc.jpg',
                 'nama' => 'Bungee ',
-                'instruktur' => 'Agung', 'ruang' => 'Kelas B', 'rating' => '3',
+                'instruktur' => 'Agung', 
+                'ruang' => 'Kelas B', 
+                'rating' => '3',
             ],
             [
                 'no' => 3,
@@ -48,7 +50,9 @@ Route::get('/gyms', function () {
                 'no' => 4,
                 'gambar' =>
                 'https://res.cloudinary.com/display97/image/upload/7930/boxing2-224119.jpeg', 'nama' => 'Boxing ',
-                'instruktur' => 'Tebri', 'ruang' => 'Kelas D', 'rating' => '5',
+                'instruktur' => 'Tebri', 
+                'ruang' => 'Kelas D', 
+                'rating' => '5',
             ]
         ]
     ]);
