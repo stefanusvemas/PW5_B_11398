@@ -49,7 +49,8 @@ Route::get('/gyms', function () {
             [
                 'no' => 4,
                 'gambar' =>
-                'https://res.cloudinary.com/display97/image/upload/7930/boxing2-224119.jpeg', 'nama' => 'Boxing ',
+                'https://res.cloudinary.com/display97/image/upload/7930/boxing2-224119.jpeg', 
+                'nama' => 'Boxing ',
                 'instruktur' => 'Tebri', 
                 'ruang' => 'Kelas D', 
                 'rating' => '5',
