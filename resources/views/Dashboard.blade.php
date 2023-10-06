@@ -32,7 +32,7 @@
             <ul class="navbar-nav ml-auto ">
                 <!-- Navbar Search -->
                 <li class="nav-item d-flex align-items-center">
-                    <button class="btn btn-sm btn-danger">
+                    <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#logoutModal">
                         <i class="fa-solid fa-right-from-bracket"></i> Logout
                     </button>
                     <div class="navbar-search-block">
@@ -91,7 +91,12 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <li class="nav-item">
                             <a href="{{ url('gyms') }}" class="nav-link"> <i class="nav-icon far fa-circle"></i>
-                                <p> Home</p>
+                                <p>Home</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('presensi') }}" class="nav-link"> <i class="nav-icon far fa-circle"></i>
+                                <p>Presensi</p>
                             </a>
                         </li>
                     </ul>
@@ -102,6 +107,20 @@
         </aside>
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
+            <div class="modal fade" id="logoutModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary">
+                            <h5 class="modal-title" id="staticBackdropLabel">Apakah Ingin Logout?</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light text-secondary border-secondary" data-bs-dismiss="modal">Close</button>
+                            <a href="{{ url('') }}" class="btn btn-danger">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             @yield('content')
         </div>
         <!-- /.content-wrapper -->

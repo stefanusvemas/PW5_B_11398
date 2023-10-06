@@ -58,3 +58,73 @@ Route::get('/gyms', function () {
         ]
     ]);
 });
+Route::get('/presensi', function () {
+    return view('Gyms/presensi', [
+        'kelas' => [
+            [
+                'no' => 1,
+                "gambar" => "https://www.fitnessfirst.co.id/id/-/media/project/evolution-wellness/fitness-first/south-east-asia/indonesia/classes/bodycombat/bodycombat_fb-sharing.png",
+                "nama" => "Body Combat",
+                'instruktur' => 'Jolly',
+                'ruang' => 'Kelas A',
+                'rating' => '5'
+            ]
+        ],
+        'member' => [
+            [
+                "no" => 1,
+                "gambar" => "public/img/user8-128x128.jpg",
+                "nama" => "Stefanus Vemas",
+                "email" => "stefanusvemas@gmail.com",
+                "no_telp" => "081234567890",
+                "jenis_kartu" => "Black",
+                "metode_pembayaran" => "Deposit Kelas"
+            ],
+            [
+                "no" => 2,
+                "gambar" => "public/img/user8-128x128.jpg",
+                "nama" => "Aditya Mahardika",
+                "email" => "adityamahardika@gmail.com",
+                "no_telp" => "081234567890",
+                "jenis_kartu" => "Gold",
+                "metode_pembayaran" => "Deposit Uang"
+            ],
+            [
+                "no" => 3,
+                "gambar" => "public/img/user8-128x128.jpg",
+                "nama" => "John",
+                "email" => "john@gmail.com",
+                "no_telp" => "081234567890",
+                "jenis_kartu" => "Silver",
+                "metode_pembayaran" => "Deposit Uang"
+            ],
+            [
+                "no" => 4,
+                "gambar" => "public/img/user8-128x128.jpg",
+                "nama" => "Doe",
+                "email" => "doe@gmail.com",
+                "no_telp" => "081234567890",
+                "jenis_kartu" => "Silver",
+                "metode_pembayaran" => "Deposit Kelas"
+            ],
+            [
+                "no" => 5,
+                "gambar" => "public/img/user8-128x128.jpg",
+                "nama" => "Sova",
+                "email" => "sova@gmail.com",
+                "no_telp" => "081234567890",
+                "jenis_kartu" => "Gold",
+                "metode_pembayaran" => "Deposit Kelas"
+            ],
+            [
+                "no" => 6,
+                "gambar" => "public/img/user8-128x128.jpg",
+                "nama" => "Butter",
+                "email" => "butter@gmail.com",
+                "no_telp" => "081234567890",
+                "jenis_kartu" => "Black",
+                "metode_pembayaran" => "Deposit Uang"
+            ],
+        ]
+    ]);
+});
