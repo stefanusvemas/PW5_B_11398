@@ -23,14 +23,14 @@
             <div class="card-body">
                 <div class="row gx-2">
                     <div class="col-auto">
-                        <img src="<?php echo $kelas[0]['gambar'] ?>" alt="<?php echo $kelas[0]['nama']; ?>" class="img-fluid rounded gambarKelas">
+                        <img src="{{$kelas[0]['gambar']}}" alt="{{$kelas[0]['nama']}}" class="img-fluid rounded gambarKelas">
                     </div>
                     <div class="col">
-                        <h3 class=""><strong><?php echo $kelas[0]['nama']; ?></strong> <button type="button" data-bs-toggle="modal" data-bs-target="#kelasModal" class="btn btn-success btn-sm"><i class="fa-solid fa-eye"></i></button></h3>
+                        <h3 class=""><strong>{{$kelas[0]['nama']}}</strong> <button type="button" data-bs-toggle="modal" data-bs-target="#kelasModal" class="btn btn-success btn-sm"><i class="fa-solid fa-eye"></i></button></h3>
                         <p class="card-text">
-                            Instruktur: <?php echo $kelas[0]['instruktur']; ?><br>
-                            Ruang: <?php echo $kelas[0]['ruang']; ?><br>
-                            Total Member: <?php echo count($members); ?><br>
+                            Instruktur: {{$kelas[0]['instruktur']}}<br>
+                            Ruang: {{$kelas[0]['ruang']}}<br>
+                            Total Member: {{count($members)}}<br>
                             Rating: <?php for ($i = 0; $i < $kelas[0]['rating']; $i++) {
                                         echo '<i class="fas fa-star" style="color: Gold;"></i>';
                                     } ?><br>
@@ -38,7 +38,7 @@
                     </div>
                     <div class="col">
                         <p class="card-text text-end">
-                            Tanggal : <?php echo date("l, d-F-y") ?>
+                            Tanggal : {{date("l, d-F-y")}}
                         </p>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
 
         <!-- Toast -->
         <div class="toast-container position-absolute bottom-0 end-0 translate-middle-y position-fixed">
-            <div class="toast align-items-center text-white bg-primary border-0"  id="presensiToast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast align-items-center text-white bg-primary border-0" id="presensiToast" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="d-flex">
                     <div class="toast-body">
                         <i class="fa-solid fa-check"></i> Berhasil Mempresensi Member
@@ -65,7 +65,7 @@
                 </div>
             </div>
         </div>
-        
+
 
         <div class="d-flex flex-wrap justify-content-between">
             @forelse ($members as $member)
@@ -76,13 +76,20 @@
                     @else
                     <div class="card-body">
                         @endif
-
                         <h5 class="card-title"><strong>{{$member['nama']}}</strong></h5>
                         <p class="card-text">
                             Email: {{$member['email']}}<br>
                             No Telp: {{$member['no_telp']}}<br>
-                            Jenis Kartu: {{$member['jenis_kartu']}}<br>
-                            Metode Pembayaran: {{$member['metode_pembayaran']}}<br>
+                            @if ($member['jenis_kartu'] == "Black")
+                            Jenis Kartu: <span class="badge border rounded-pill" style="border-color: white;">{{$member['jenis_kartu']}}</span><br>
+                            @else
+                            Jenis Kartu: <span class="badge border border-dark rounded-pill">{{$member['jenis_kartu']}}</span><br>
+                            @endif
+                            @if ($member['metode_pembayaran'] == "Deposit Kelas")
+                            Metode Pembayaran: <span class="badge badge-primary">{{$member['metode_pembayaran']}}</span>
+                            @else
+                            Metode Pembayaran: <span class="badge badge-success">{{$member['metode_pembayaran']}}</span>
+                            @endif
                         </p>
                     </div>
                 </div>
@@ -105,14 +112,14 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <h3 class=""><strong><?php echo $kelas[0]['nama']; ?></strong></h3>
+                        <h3 class=""><strong>{{$kelas[0]['nama']}}</strong></h3>
                         <p class="card-text">
                         <div class="row">
                             <div class="col-4">
                                 Nama Instruktur
                             </div>
                             <div class="col">
-                                : <?php echo $kelas[0]['instruktur']; ?>
+                                : {{$kelas[0]['instruktur']}}
                             </div>
                         </div>
                         <div class="row">
@@ -120,7 +127,7 @@
                                 Kode Instruktur
                             </div>
                             <div class="col">
-                                : <?php echo $kelas[0]['kode']; ?>
+                                : {{$kelas[0]['kode']}}
                             </div>
                         </div>
                         <div class="row">
@@ -128,7 +135,7 @@
                                 Hari Kelas
                             </div>
                             <div class="col">
-                                : <?php echo date("l"); ?>
+                                : {{date("l")}}
                             </div>
                         </div>
                         <div class="row">
@@ -136,7 +143,7 @@
                                 Tanggal Kelas
                             </div>
                             <div class="col">
-                                : <?php echo date("d-M-Y"); ?>
+                                : {{date("d-M-Y")}}
                             </div>
                         </div>
                         <div class="row">
@@ -144,7 +151,7 @@
                                 Ruang
                             </div>
                             <div class="col">
-                                : <?php echo $kelas[0]['ruang']; ?>
+                                : {{$kelas[0]['ruang']}}
                             </div>
                         </div>
                         <div class="row">
