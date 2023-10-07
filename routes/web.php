@@ -65,15 +65,16 @@ Route::get('/presensi', function () {
                 'no' => 1,
                 "gambar" => "https://www.fitnessfirst.co.id/id/-/media/project/evolution-wellness/fitness-first/south-east-asia/indonesia/classes/bodycombat/bodycombat_fb-sharing.png",
                 "nama" => "Body Combat",
-                'instruktur' => 'Jolly',
+                'instruktur' => 'Stefanus Vemas Aditya Mahardika',
+                'kode' => '210711398',
                 'ruang' => 'Kelas A',
                 'rating' => '5'
             ]
         ],
-        'member' => [
+        'members' => [
             [
                 "no" => 1,
-                "gambar" => "public/img/user8-128x128.jpg",
+                "gambar" => "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
                 "nama" => "Stefanus Vemas",
                 "email" => "stefanusvemas@gmail.com",
                 "no_telp" => "081234567890",
@@ -82,7 +83,7 @@ Route::get('/presensi', function () {
             ],
             [
                 "no" => 2,
-                "gambar" => "public/img/user8-128x128.jpg",
+                "gambar" => "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
                 "nama" => "Aditya Mahardika",
                 "email" => "adityamahardika@gmail.com",
                 "no_telp" => "081234567890",
@@ -91,7 +92,7 @@ Route::get('/presensi', function () {
             ],
             [
                 "no" => 3,
-                "gambar" => "public/img/user8-128x128.jpg",
+                "gambar" => "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
                 "nama" => "John",
                 "email" => "john@gmail.com",
                 "no_telp" => "081234567890",
@@ -100,7 +101,7 @@ Route::get('/presensi', function () {
             ],
             [
                 "no" => 4,
-                "gambar" => "public/img/user8-128x128.jpg",
+                "gambar" => "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
                 "nama" => "Doe",
                 "email" => "doe@gmail.com",
                 "no_telp" => "081234567890",
@@ -109,7 +110,7 @@ Route::get('/presensi', function () {
             ],
             [
                 "no" => 5,
-                "gambar" => "public/img/user8-128x128.jpg",
+                "gambar" => "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
                 "nama" => "Sova",
                 "email" => "sova@gmail.com",
                 "no_telp" => "081234567890",
@@ -118,7 +119,7 @@ Route::get('/presensi', function () {
             ],
             [
                 "no" => 6,
-                "gambar" => "public/img/user8-128x128.jpg",
+                "gambar" => "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
                 "nama" => "Butter",
                 "email" => "butter@gmail.com",
                 "no_telp" => "081234567890",
